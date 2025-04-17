@@ -62,10 +62,25 @@ namespace LINQ
             {
                 Console.WriteLine(s.Name);
             }
+            // Query: Students Achieved A Aggregate
+            var studentsAchievedA = from s in students
+                                    where s.Grade() == "A"
+                                    select s;
+
+            // Display
+            Console.WriteLine("Students Achieved A: ");
+            foreach (var s in studentsAchievedA)
+            {
+                Console.WriteLine($" Name: {s.Name} with a mark of {s.Marks}");
+            }
         }
 
 
 
+
+
     }
+
+    //
 
 }
